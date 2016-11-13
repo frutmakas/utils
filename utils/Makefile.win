@@ -1,0 +1,83 @@
+# Project: utils_devcpp
+# Makefile created by Dev-C++ 4.9.9.1
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = utils_devcpp_private.res
+OBJ  = ../fading/fadingtdma.o ../modulation/psk.o ../queue/fifo.o ../queue/list.o ../rand/randgen.o ../sort/heapsort.o ../sort/quicksort.o ../tools/binmat.o ../tools/binsparse.o ../tools/ext_utilitis.o ../tools/tools.o ../tools/utilitis.o ../coding/block/ldpc.o ../fft/fft.o ../cdma/walsh.o ../tools/interleaver.o zigzag_test.o ../coding/zigzag.o $(RES)
+LINKOBJ  = ../fading/fadingtdma.o ../modulation/psk.o ../queue/fifo.o ../queue/list.o ../rand/randgen.o ../sort/heapsort.o ../sort/quicksort.o ../tools/binmat.o ../tools/binsparse.o ../tools/ext_utilitis.o ../tools/tools.o ../tools/utilitis.o ../coding/block/ldpc.o ../fft/fft.o ../cdma/walsh.o ../tools/interleaver.o zigzag_test.o ../coding/zigzag.o $(RES)
+LIBS =  -L"d:/Dev-Cpp/lib"  -lgmon -pg  -g3 -march=athlon-mp 
+INCS =  -I"d:/Dev-Cpp/include"  -I"E:/work/utils" 
+CXXINCS =  -I"d:/Dev-Cpp/include/c++"  -I"d:/Dev-Cpp/include/c++/mingw32"  -I"d:/Dev-Cpp/include/c++/backward"  -I"d:/Dev-Cpp/lib/gcc-lib/mingw32/3.2/include"  -I"d:/Dev-Cpp/include"  -I"E:/work/utils"  -I"E:/work/utils" 
+BIN  = G:/ldpc/ldpc.exe
+CXXFLAGS = $(CXXINCS) -Wall -Wno-deprecated -DDEVCPP   -fexpensive-optimizations -O3 -pg -g3 -march=athlon-mp
+CFLAGS = $(INCS)   -fexpensive-optimizations -O3 -pg -g3 -march=athlon-mp
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before G:/ldpc/ldpc.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "G:\ldpc\ldpc.exe" $(LIBS)
+
+../fading/fadingtdma.o: ../fading/fadingtdma.cpp d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/tools/utilitis.h ../fading/fadingtdma.h   E:/work/utils/rand/randgen.h d:/Dev-Cpp/include/c++/backward/fstream.h   d:/Dev-Cpp/include/c++/backward/backward_warning.h
+	$(CPP) -c ../fading/fadingtdma.cpp -o ../fading/fadingtdma.o $(CXXFLAGS)
+
+../modulation/psk.o: ../modulation/psk.cpp d:/Dev-Cpp/include/c++/iostream   E:/work/utils/modulation/psk.h E:/work/utils/globaldef.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/fstream   E:/work/utils/tools/tools.h
+	$(CPP) -c ../modulation/psk.cpp -o ../modulation/psk.o $(CXXFLAGS)
+
+../queue/fifo.o: ../queue/fifo.cpp 
+	$(CPP) -c ../queue/fifo.cpp -o ../queue/fifo.o $(CXXFLAGS)
+
+../queue/list.o: ../queue/list.cpp E:/work/utils/queue/list.h   d:/Dev-Cpp/include/stdio.h d:/Dev-Cpp/include/_mingw.h   d:/Dev-Cpp/lib/gcc-lib/mingw32/3.2/include/stddef.h   d:/Dev-Cpp/lib/gcc-lib/mingw32/3.2/include/stdarg.h
+	$(CPP) -c ../queue/list.cpp -o ../queue/list.o $(CXXFLAGS)
+
+../rand/randgen.o: ../rand/randgen.cpp E:/work/utils/globaldef.h   d:/Dev-Cpp/include/c++/iostream d:/Dev-Cpp/include/c++/fstream   E:/work/utils/rand/randgen.h E:/work/utils/tools/utilitis.h
+	$(CPP) -c ../rand/randgen.cpp -o ../rand/randgen.o $(CXXFLAGS)
+
+../sort/heapsort.o: ../sort/heapsort.cpp E:/work/utils/tools/utilitis.h   d:/Dev-Cpp/include/c++/iostream d:/Dev-Cpp/include/c++/fstream   E:/work/utils/globaldef.h E:/work/utils/sort/exception.h
+	$(CPP) -c ../sort/heapsort.cpp -o ../sort/heapsort.o $(CXXFLAGS)
+
+../sort/quicksort.o: ../sort/quicksort.cpp E:/work/utils/sort/quicksort.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/sort/exception.h E:/work/utils/tools/tools.h
+	$(CPP) -c ../sort/quicksort.cpp -o ../sort/quicksort.o $(CXXFLAGS)
+
+../tools/binmat.o: ../tools/binmat.cpp E:/work/utils/tools/tools.h   d:/Dev-Cpp/include/math.h d:/Dev-Cpp/include/_mingw.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/tools/binmat.h
+	$(CPP) -c ../tools/binmat.cpp -o ../tools/binmat.o $(CXXFLAGS)
+
+../tools/binsparse.o: ../tools/binsparse.cpp E:/work/utils/tools/binsparse.h   E:/work/utils/queue/list.h d:/Dev-Cpp/include/stdio.h   d:/Dev-Cpp/include/_mingw.h   d:/Dev-Cpp/lib/gcc-lib/mingw32/3.2/include/stddef.h   d:/Dev-Cpp/lib/gcc-lib/mingw32/3.2/include/stdarg.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/tools/binmat.h
+	$(CPP) -c ../tools/binsparse.cpp -o ../tools/binsparse.o $(CXXFLAGS)
+
+../tools/ext_utilitis.o: ../tools/ext_utilitis.cpp d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/tools/utilitis.h   E:/work/utils/globaldef.h E:/work/utils/tools/superclass.h   E:/work/utils/tools/ext_utilitis.h
+	$(CPP) -c ../tools/ext_utilitis.cpp -o ../tools/ext_utilitis.o $(CXXFLAGS)
+
+../tools/tools.o: ../tools/tools.cpp E:/work/utils/tools/tools.h   d:/Dev-Cpp/include/math.h d:/Dev-Cpp/include/_mingw.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h
+	$(CPP) -c ../tools/tools.cpp -o ../tools/tools.o $(CXXFLAGS)
+
+../tools/utilitis.o: ../tools/utilitis.cpp d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/tools/utilitis.h   E:/work/utils/globaldef.h E:/work/utils/tools/tools.h
+	$(CPP) -c ../tools/utilitis.cpp -o ../tools/utilitis.o $(CXXFLAGS)
+
+../coding/block/ldpc.o: ../coding/block/ldpc.cpp d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/rand/randgen.h   E:/work/utils/globaldef.h E:/work/utils/tools/utilitis.h   E:/work/utils/tools/tools.h E:/work/utils/tools/binmat.h   E:/work/utils/queue/fifo.h E:/work/utils/queue/list.h   E:/work/utils/coding/block/ldpc.h E:/work/utils/tools/binsparse.h
+	$(CPP) -c ../coding/block/ldpc.cpp -o ../coding/block/ldpc.o $(CXXFLAGS)
+
+../fft/fft.o: ../fft/fft.cpp d:/Dev-Cpp/include/c++/iostream   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/fstream   E:/work/utils/globaldef.h E:/work/utils/fft/fft.h   E:/work/utils/tools/tools.h
+	$(CPP) -c ../fft/fft.cpp -o ../fft/fft.o $(CXXFLAGS)
+
+../cdma/walsh.o: ../cdma/walsh.cpp E:/work/utils/cdma/walsh.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/tools/tools.h
+	$(CPP) -c ../cdma/walsh.cpp -o ../cdma/walsh.o $(CXXFLAGS)
+
+../tools/interleaver.o: ../tools/interleaver.cpp E:/work/utils/tools/interleaver.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/fstream E:/work/utils/globaldef.h   E:/work/utils/rand/randgen.h
+	$(CPP) -c ../tools/interleaver.cpp -o ../tools/interleaver.o $(CXXFLAGS)
+
+zigzag_test.o: zigzag_test.cpp d:/Dev-Cpp/include/c++/backward/iostream.h   d:/Dev-Cpp/include/c++/backward/backward_warning.h   d:/Dev-Cpp/include/c++/iostream E:/work/utils/tools/all.h   E:/work/utils/tools/utilitis.h d:/Dev-Cpp/include/c++/fstream   E:/work/utils/globaldef.h E:/work/utils/tools/tools.h   E:/work/utils/tools/ext_utilitis.h E:/work/utils/tools/superclass.h   E:/work/utils/tools/binmat.h E:/work/utils/tools/binsparse.h   E:/work/utils/queue/list.h E:/work/utils/tools/interleaver.h   E:/work/utils/rand/randgen.h E:/work/utils/tools/pilot.h   E:/work/utils/coding/zigzag.h
+	$(CPP) -c zigzag_test.cpp -o zigzag_test.o $(CXXFLAGS)
+
+../coding/zigzag.o: ../coding/zigzag.cpp d:/Dev-Cpp/include/c++/backward/iostream.h   d:/Dev-Cpp/include/c++/backward/backward_warning.h   d:/Dev-Cpp/include/c++/iostream   d:/Dev-Cpp/include/c++/backward/fstream.h   d:/Dev-Cpp/include/c++/fstream E:/work/utils/coding/zigzag.h   E:/work/utils/tools/all.h E:/work/utils/tools/utilitis.h   E:/work/utils/globaldef.h E:/work/utils/tools/tools.h   E:/work/utils/tools/ext_utilitis.h E:/work/utils/tools/superclass.h   E:/work/utils/tools/binmat.h E:/work/utils/tools/binsparse.h   E:/work/utils/queue/list.h E:/work/utils/tools/interleaver.h   E:/work/utils/rand/randgen.h E:/work/utils/tools/pilot.h
+	$(CPP) -c ../coding/zigzag.cpp -o ../coding/zigzag.o $(CXXFLAGS)
+
+utils_devcpp_private.res: utils_devcpp_private.rc 
+	$(WINDRES) -i utils_devcpp_private.rc --input-format=rc -o utils_devcpp_private.res -O coff 

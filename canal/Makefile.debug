@@ -1,0 +1,19 @@
+UTILS_PATH = ../tools
+UTILS = ${UTILS_PATH}/utilitis.cpp ${UTILS_PATH}/utilitis.h
+RANDGEN_PATH=../rand
+RAND=${RANDGEN_PATH}/randgen.cpp ${RANDGEN_PATH}/randgen.h
+OPTS= -c -I../
+OPTS2= -g -Wall -Wno-deprecated
+
+all : canal.o awgn.o 
+
+awgn.o: awgn.cpp awgn.h ${UTILS}
+	g++ $(OPTS) $(OPTS2)  awgn.cpp
+
+canal.o: canal.cpp canal.h ${UTILS}
+	g++ $(OPTS) $(OPTS2) canal.cpp
+
+
+	
+
+

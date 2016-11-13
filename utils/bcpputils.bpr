@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="G:\simul\bcpputils.exe"/>
+    <OBJFILES value="..\tools\utilitis.obj ..\tools\tools.obj ..\tools\pilot.obj 
+      ..\tools\myutils.obj ..\tools\ext_utilitis.obj ..\tools\ext_matrix.obj 
+      ..\tools\binsparse.obj ..\tools\binmat.obj ..\stbc\conversion.obj 
+      ..\sort\quicksort.obj ..\sort\heapsort.obj ..\rand\randgen.obj 
+      ..\queue\list.obj ..\queue\fifo.obj ..\modulation\psk.obj 
+      ..\modulation\ofdm.obj ..\fft\fft.obj ..\fading\fadingtdma.obj 
+      ..\coding\block\ldpc.obj ..\canal\canal_ofdm.obj sfbcofdmldpc.obj 
+      ..\cdma\cdmatest.obj ..\cdma\gold.obj ..\cdma\spread.obj ..\cdma\walsh.obj"/>
+    <RESFILES value="bcpputils.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value="..\..\bcpp\libF77.lib ..\..\bcpp\clapack.lib ..\..\bcpp\blas.lib 
+      ..\..\bcpp\libI77.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;..\tools;..\stbc;..\sort;..\rand;..\queue;..\modulation;..\fft;..\fading;..\coding\block;..\canal;..\cdma"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="bcpputils.bpf"/>
+    <INCLUDEPATH value="..\cdma;..\canal;e:\work\utils;e:\work\bcpp;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\cdma;e:\work\bcpp;..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-vGc -vGt -vGd -Od -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWC -tWM -c"/>
+    <PFLAGS value="-$YD -$W -$U -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -ap -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="cg32.lib $(LIBFILES) $(LIBRARIES) import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="bcpputils.res" FORMNAME="" UNITNAME="bcpputils.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bcpputils.bpf" FORMNAME="" UNITNAME="bcpputils" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\superclass.h" FORMNAME="" UNITNAME="superclass.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\utilitis.h" FORMNAME="" UNITNAME="utilitis.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\utilitis.cpp" FORMNAME="" UNITNAME="utilitis" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\tools.h" FORMNAME="" UNITNAME="tools.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\tools.cpp" FORMNAME="" UNITNAME="tools" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\pilot.h" FORMNAME="" UNITNAME="pilot.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\pilot.cpp" FORMNAME="" UNITNAME="pilot" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\myutils.h" FORMNAME="" UNITNAME="myutils.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\myutils.cpp" FORMNAME="" UNITNAME="myutils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binsparse.h" FORMNAME="" UNITNAME="binsparse.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_utilitis.cpp" FORMNAME="" UNITNAME="ext_utilitis" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_matrix.h" FORMNAME="" UNITNAME="ext_matrix.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_matrix.cpp" FORMNAME="" UNITNAME="ext_matrix" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\clapack_tools.h" FORMNAME="" UNITNAME="clapack_tools.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_utilitis.h" FORMNAME="" UNITNAME="ext_utilitis.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binsparse.cpp" FORMNAME="" UNITNAME="binsparse" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binmat.h" FORMNAME="" UNITNAME="binmat.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binmat.cpp" FORMNAME="" UNITNAME="binmat" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\all.h" FORMNAME="" UNITNAME="all.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\stbc\conversion.cpp" FORMNAME="" UNITNAME="conversion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\stbc\conversion.h" FORMNAME="" UNITNAME="conversion.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\quicksort.h" FORMNAME="" UNITNAME="quicksort.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\quicksort.cpp" FORMNAME="" UNITNAME="quicksort" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\heapsort.h" FORMNAME="" UNITNAME="heapsort.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\heapsort.cpp" FORMNAME="" UNITNAME="heapsort" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\exception.h" FORMNAME="" UNITNAME="exception.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\rand\randgen.h" FORMNAME="" UNITNAME="randgen.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\rand\randgen.cpp" FORMNAME="" UNITNAME="randgen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\list.h" FORMNAME="" UNITNAME="list.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\list.cpp" FORMNAME="" UNITNAME="list" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\fifo.h" FORMNAME="" UNITNAME="fifo.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\fifo.cpp" FORMNAME="" UNITNAME="fifo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\psk.cpp" FORMNAME="" UNITNAME="psk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\ofdm.h" FORMNAME="" UNITNAME="ofdm.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\ofdm.cpp" FORMNAME="" UNITNAME="ofdm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\psk.h" FORMNAME="" UNITNAME="psk.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fft\fft.h" FORMNAME="" UNITNAME="fft.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fft\fft.cpp" FORMNAME="" UNITNAME="fft" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fading\fadingtdma.h" FORMNAME="" UNITNAME="fadingtdma.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fading\fadingtdma.cpp" FORMNAME="" UNITNAME="fadingtdma" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\coding\block\ldpc.h" FORMNAME="" UNITNAME="ldpc.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\coding\block\ldpc.cpp" FORMNAME="" UNITNAME="ldpc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\canal\canal_ofdm.cpp" FORMNAME="" UNITNAME="canal_ofdm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\canal\canal_ofdm.h" FORMNAME="" UNITNAME="canal_ofdm.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\globaldef.h" FORMNAME="" UNITNAME="globaldef.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\bcpp\libF77.lib" FORMNAME="" UNITNAME="libF77.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\bcpp\clapack.lib" FORMNAME="" UNITNAME="clapack.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\bcpp\blas.lib" FORMNAME="" UNITNAME="blas.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\bcpp\libI77.lib" FORMNAME="" UNITNAME="libI77.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sfbcofdmldpc.cpp" FORMNAME="" UNITNAME="sfbcofdmldpc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\cdma\cdmatest.cpp" FORMNAME="" UNITNAME="cdmatest.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\cdma\gold.cpp" FORMNAME="" UNITNAME="gold.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\cdma\spread.cpp" FORMNAME="" UNITNAME="spread.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\cdma\walsh.cpp" FORMNAME="" UNITNAME="walsh.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1036
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=..\cdma;..\canal;e:\work\utils;e:\work\bcpp;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\canal;e:\work\utils;e:\work\bcpp;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\canal;m:\work\utils;m:\work\bcpp;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;E:\sandbox\utils\utils;E:\sandbox\utils;E:\sandbox\bcpp;$(BCB)\include;$(BCB)\include\vcl
+Item4=..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;E:\sandbox\utils\utils;E:\sandbox\utils;E:\sandbox\bcpp;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\include;$(BCB)\include\vcl
+Item5=E:\sandbox\utils;E:\sandbox\bcpp;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\include;$(BCB)\include\vcl
+Item6=E:\sandbox\utils;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\include;$(BCB)\include\vcl
+Item7=E:\sandbox\utils\;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\include;$(BCB)\include\vcl
+Item8=E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=7
+Item0=..\cdma;e:\work\bcpp;..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\lib\obj;$(BCB)\lib
+Item1=e:\work\bcpp;..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\lib\obj;$(BCB)\lib
+Item2=m:\work\bcpp;..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;E:\sandbox\utils\utils;E:\sandbox\bcpp;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..\canal;..\coding\block;..\fading;..\fft;..\modulation;..\queue;..\rand;..\sort;..\stbc;..\tools;E:\sandbox\utils\utils;E:\sandbox\bcpp;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\lib\obj;$(BCB)\lib
+Item5=E:\sandbox\bcpp;E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\lib\obj;$(BCB)\lib
+Item6=E:\sandbox\utils\canal;E:\sandbox\utils\coding\block;E:\sandbox\utils\fading;E:\sandbox\utils\fft;E:\sandbox\utils\modulation;E:\sandbox\utils\queue;E:\sandbox\utils\rand;E:\sandbox\utils\sort;E:\sandbox\utils\stbc;E:\sandbox\utils\tools;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=G:\simul\
+Item1=G:\simul
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

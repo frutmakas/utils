@@ -1,0 +1,15 @@
+USEUNIT(".\canal\awgn.cpp");
+USEUNIT(".\canal\canal.cpp");
+USEUNIT(".\stbc\conversion.cpp");
+USEUNIT(".\fft\fft.cpp");
+USEUNIT(".\interpol\interpol.cpp");
+USEUNIT(".\tools\myutils.cpp");
+USEUNIT(".\nr\nrutil.cpp");
+USEUNIT(".\modulation\psk.cpp");
+USEUNIT(".\rand\randgen.cpp");
+USEUNIT(".\utils\test.cpp");
+USEUNIT(".\tools\tools.cpp");
+USEUNIT(".\tools\utilitis.cpp");
+USEFILE("vctobpr.log");
+
+#define WinMain

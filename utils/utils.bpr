@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Debug\utils.exe"/>
+    <OBJFILES value="Debug\binmat.obj Debug\binsparse.obj Debug\canal_ofdm.obj 
+      Debug\clapackdemo.obj Debug\conversion.obj Debug\ext_matrix.obj 
+      Debug\ext_utilitis.obj Debug\fadingtdma.obj Debug\fft.obj Debug\fifo.obj 
+      Debug\heapsort.obj Debug\interpol.obj Debug\ldpc.obj Debug\list.obj 
+      Debug\nrutil.obj Debug\ofdm.obj Debug\pilot.obj Debug\psk.obj 
+      Debug\quicksort.obj Debug\randgen.obj Debug\tools.obj Debug\utilitis.obj 
+      Debug\utils2lapack.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi adortl.bpi vcldb.bpi 
+      qrpt.bpi bdertl.bpi vcldbx.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi 
+      teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi visualclx.bpi visualdbclx.bpi 
+      vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi 
+      nmfast.bpi bcbie.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;..\tools;..\canal;..\stbc;..\fading;..\fft;..\queue;..\sort;..\interpol;..\coding\block;..\nr;..\modulation;..\rand"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="WIN32;_DEBUG;_CONSOLE;_MBCS"/>
+    <SYSDEFINES value="_ASSERTE;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="utils.bpf"/>
+    <INCLUDEPATH value="M:\work\utils;..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\lib\debug;M:\work\utils;..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\lib;$(DEBUGLIBPATH);$(BCB)\lib\psdk"/>
+    <WARNINGS value="-w-8026 -w-8027 -w-8022 -w-8084 -w-8010 -w-8013 -w-8058 -w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include"/>
+    <CFLAG1 value="-Od -w -VF -X- -AU -a8 -b -k -v -vi -q -c -w-8026 -w-8027 -w-8022 -w-8084 
+      -w-8010 -w-8013 -w-8058 -w-par"/>
+    <PFLAGS value="-N2Debug -N0Debug -$YD -$A8"/>
+    <RFLAGS value="/l 0x40c /d &quot;_DEBUG&quot; /i$(BCB)\include;$(BCB)\include\mfc"/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-IDebug -D&quot;&quot; -ap -Tpe -x -Gn -v -q"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) ODBCCP32.LIB UUID.LIB ODBCCP32.LIB UUID.LIB 
+      import32.lib cw32.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="utils.bpf" FORMNAME="" UNITNAME="utils" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binmat.cpp" FORMNAME="" UNITNAME="binmat" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\binsparse.cpp" FORMNAME="" UNITNAME="binsparse" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\canal\canal_ofdm.cpp" FORMNAME="" UNITNAME="canal_ofdm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="clapackdemo.cpp" FORMNAME="" UNITNAME="clapackdemo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\stbc\conversion.cpp" FORMNAME="" UNITNAME="conversion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_matrix.cpp" FORMNAME="" UNITNAME="ext_matrix" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\ext_utilitis.cpp" FORMNAME="" UNITNAME="ext_utilitis" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fading\fadingtdma.cpp" FORMNAME="" UNITNAME="fadingtdma" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\fft\fft.cpp" FORMNAME="" UNITNAME="fft" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\fifo.cpp" FORMNAME="" UNITNAME="fifo" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\heapsort.cpp" FORMNAME="" UNITNAME="heapsort" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\interpol\interpol.cpp" FORMNAME="" UNITNAME="interpol" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\coding\block\ldpc.cpp" FORMNAME="" UNITNAME="ldpc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\queue\list.cpp" FORMNAME="" UNITNAME="list" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\nr\nrutil.cpp" FORMNAME="" UNITNAME="nrutil" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\ofdm.cpp" FORMNAME="" UNITNAME="ofdm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\pilot.cpp" FORMNAME="" UNITNAME="pilot" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\modulation\psk.cpp" FORMNAME="" UNITNAME="psk" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\sort\quicksort.cpp" FORMNAME="" UNITNAME="quicksort" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\rand\randgen.cpp" FORMNAME="" UNITNAME="randgen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\tools.cpp" FORMNAME="" UNITNAME="tools" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\utilitis.cpp" FORMNAME="" UNITNAME="utilitis" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\tools\utils2lapack.cpp" FORMNAME="" UNITNAME="utils2lapack" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="vctobpr.log" FORMNAME="" UNITNAME="vctobpr" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=2
+Item0=M:\work\utils;..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl;$(BCB)\include\vcl
+Item1=..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\include;$(BCB)\include\mfc;$(BCB)\include\atl;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=$(BCB)\lib\debug;M:\work\utils;..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\lib;$(DEBUGLIBPATH);$(BCB)\lib\psdk
+Item1=M:\work\utils;..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\lib;$(DEBUGLIBPATH);$(BCB)\lib\psdk
+Item2=..\rand;..\modulation;..\nr;..\coding\block;..\interpol;..\sort;..\queue;..\fft;..\fading;..\stbc;..\canal;..\tools;$(BCB)\lib;$(DEBUGLIBPATH);$(BCB)\lib\psdk
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=WIN32;_DEBUG;_CONSOLE;_MBCS
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=Debug
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=Debug\
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

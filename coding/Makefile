@@ -1,0 +1,26 @@
+UTILS_PATH = ../tools
+UTILS = ${UTILS_PATH}/utilitis.cpp ${UTILS_PATH}/utilitis.h
+TOOLS = ${UTILS_PATH}/tools.cpp ${UTILS_PATH}/tools.h
+RANDGEN_PATH=../rand
+RAND=${RANDGEN_PATH}/randgen.cpp ${RANDGEN_PATH}/randgen.h
+SUBDIRS=block
+OPTS=-O3 -Wall -Wno-deprecated
+
+all : subdir_make coding.o tcm_coding.o zigzag.o
+
+subdir_make:
+	        list='$(SUBDIRS)'; for subdir in $$list; do \
+			echo "Making in $$subdir"; \
+			(cd $$subdir && if test -e Makefile; then \
+			    make; \
+			    else echo "Nothing to do in $$subdir"; fi)\
+			        done;
+
+coding.o : ${UTILS} coding.h coding.cpp Makefile ../globaldef.h
+	g++ -c -I../ $(OPTS) coding.cpp
+
+tcm_coding.o : ${UTILS} tcm_coding.cpp tcm_coding.h Makefile ../globaldef.h
+	g++ -c -I../ $(OPTS) tcm_coding.cpp
+
+zigzag.o : ${UTILS} zigzag.h zigzag.cpp Makefile ../globaldef.h
+	g++ -c -I../ $(OPTS) zigzag.cpp

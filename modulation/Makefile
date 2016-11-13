@@ -1,0 +1,19 @@
+UTILS_PATH = ../tools
+UTILS = ${UTILS_PATH}/utilitis.cpp ${UTILS_PATH}/utilitis.h
+TOOLS = ${UTILS_PATH}/tools.cpp ${UTILS_PATH}/tools.h
+RANDGEN_PATH=../rand
+RAND=${RANDGEN_PATH}/randgen.cpp ${RANDGEN_PATH}/randgen.h
+FFT_PATH=../fft
+FFT = $(FFT_PATH)/fft.cpp $(FFT_PATH)/fft.h
+
+OPTS = -O3 -Wall -Wno-deprecated
+
+all : psk.o ofdm.o
+
+psk.o :  Makefile ../globaldef.h psk.cpp psk.h ${TOOLS}  ${UTILS}
+	g++ -c $(OPTS) -I../ psk.cpp
+
+ofdm.o: Makefile ../globaldef.h ofdm.h ofdm.cpp $(TOOLS) $(FFT) $(UTILS)
+	g++ -c $(OPTS) -I../ ofdm.cpp
+
+

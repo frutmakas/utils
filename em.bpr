@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.10"/>
+    <PROJECT value="em"/>
+    <OBJFILES value="modulation/ofdm.o modulation/psk.o canal/awgn.o canal/canal.o 
+      coding/coding.o coding/tcm_coding.o coding/block/ldpc.o 
+      fading/fadingtdma.o fft/fft.o nr/nrutil.o queue/fifo.o queue/list.o 
+      rand/randgen.o sort/heapsort.o sort/quicksort.o stbc/conversion.o 
+      tools/binmat.o tools/binsparse.o tools/ext_utilitis.o tools/interleaver.o 
+      tools/myutils.o tools/pilot.o tools/tools.o tools/utilitis.o utils/em2.o"/>
+    <RESFILES value="em.res"/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="rtl.bpi visualclx.bpi dataclx.bpi visualdbclx.bpi netclx.bpi 
+      netdataclx.bpi xmlrtl.bpi indy.bpi webdsnapclx.bpi websnapclx.bpi 
+      soaprtl.bpi"/>
+    <PATHCPP value=".;modulation:canal:coding:coding/block:fading:fft:nr:queue:rand:sort:stbc:tools:utils"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)/lib/debug"/>
+    <RELEASELIBPATH value="$(BCB)/lib/release"/>
+    <LINKER value="ilink"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="_NO_VCL"/>
+    <MAINSOURCE value="em.bpf"/>
+    <INCLUDEPATH value="utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:/home/syed/sandbox/bcb:../../bcb:$(BCB)/include/stlport:$(BCB)/include:/usr/include"/>
+    <LIBPATH value="utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-tC -Od -H=$(HOME)/.borland/clx69.csm -Hc -Vx -X- -r- -a8 -b- -k -y -v 
+      -vi- -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -ap -Tpe -x -Gn -v"/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="borinit.o crt1.o $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) libborcrtl.a libborstl.a libborunwind.a 
+      libpthread.so libc.so libm.so libdl.so "/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="em.res" FORMNAME="" UNITNAME="em.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="em.bpf" FORMNAME="" UNITNAME="em" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="modulation/ofdm.cpp" FORMNAME="" UNITNAME="ofdm.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="modulation/psk.cpp" FORMNAME="" UNITNAME="psk.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="canal/awgn.cpp" FORMNAME="" UNITNAME="awgn.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="canal/canal.cpp" FORMNAME="" UNITNAME="canal.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="coding/coding.cpp" FORMNAME="" UNITNAME="coding.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="coding/tcm_coding.cpp" FORMNAME="" UNITNAME="tcm_coding.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="coding/block/ldpc.cpp" FORMNAME="" UNITNAME="ldpc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fading/fadingtdma.cpp" FORMNAME="" UNITNAME="fadingtdma" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="fft/fft.cpp" FORMNAME="" UNITNAME="fft" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="nr/nrutil.cpp" FORMNAME="" UNITNAME="nrutil" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="queue/fifo.cpp" FORMNAME="" UNITNAME="fifo.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="queue/list.cpp" FORMNAME="" UNITNAME="list.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rand/randgen.cpp" FORMNAME="" UNITNAME="randgen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sort/heapsort.cpp" FORMNAME="" UNITNAME="heapsort.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="sort/quicksort.cpp" FORMNAME="" UNITNAME="quicksort.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="stbc/conversion.cpp" FORMNAME="" UNITNAME="conversion" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/binmat.cpp" FORMNAME="" UNITNAME="binmat.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/binsparse.cpp" FORMNAME="" UNITNAME="binsparse.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/ext_utilitis.cpp" FORMNAME="" UNITNAME="ext_utilitis.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/interleaver.cpp" FORMNAME="" UNITNAME="interleaver.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/myutils.cpp" FORMNAME="" UNITNAME="myutils.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/pilot.cpp" FORMNAME="" UNITNAME="pilot.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/tools.cpp" FORMNAME="" UNITNAME="tools.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="tools/utilitis.cpp" FORMNAME="" UNITNAME="utilitis.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="utils/em2.cpp" FORMNAME="" UNITNAME="em2" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[HistoryLists\hlIncludePath]
+Count=7
+Item0=utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:/home/syed/sandbox/bcb:../../bcb:$(BCB)/include/stlport:$(BCB)/include:/usr/include
+Item1=utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:/home/syed/sandbox/bcb:../../bcb:$(BCB)/include/stlport:$(BCB)/include
+Item2=utils:tools:stbc:sort:rand:queue:nr/:fft:fading:coding/block:coding:canal:modulation:/home/syed/sandbox/bcb:../../bcb:$(BCB)/include/stlport:$(BCB)/include
+Item3=/home/syed/sandbox/bcb:../../bcb:$(BCB)/include/stlport:$(BCB)/include
+Item4=/home/syed/sandbox/bcb:utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+Item5=/home/syed/sandbox/bcb:utils:tools:stbc:sort:rand:queue:nr/:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+Item6=utils:tools:stbc:sort:rand:queue:nr/:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/include/stlport:$(BCB)/include:$(BCB)/include/vcl:/usr/include
+
+[HistoryLists\hlLibraryPath]
+Count=2
+Item0=utils:tools:stbc:sort:rand:queue:nr:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin
+Item1=utils:tools:stbc:sort:rand:queue:nr/:fft:fading:coding/block:coding:canal:modulation:../../bcb:$(BCB)/lib/obj:$(BCB)/lib:/usr/lib:/lib:/usr/X11R6/lib:$(BCB)/bin
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=/usr/X11R6/bin/xterm -T KylixDebuggerOutput -e bash -i -c %debuggee%
+UseLauncher=0
+DebugCWD=
+HostApplication=
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+  </IDEOPTIONS>
+</PROJECT>

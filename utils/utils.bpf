@@ -1,0 +1,26 @@
+USEUNIT("..\tools\binmat.cpp");
+USEUNIT("..\tools\binsparse.cpp");
+USEUNIT("..\canal\canal_ofdm.cpp");
+USEUNIT(".\clapackdemo.cpp");
+USEUNIT("..\stbc\conversion.cpp");
+USEUNIT("..\tools\ext_matrix.cpp");
+USEUNIT("..\tools\ext_utilitis.cpp");
+USEUNIT("..\fading\fadingtdma.cpp");
+USEUNIT("..\fft\fft.cpp");
+USEUNIT("..\queue\fifo.cpp");
+USEUNIT("..\sort\heapsort.cpp");
+USEUNIT("..\interpol\interpol.cpp");
+USEUNIT("..\coding\block\ldpc.cpp");
+USEUNIT("..\queue\list.cpp");
+USEUNIT("..\nr\nrutil.cpp");
+USEUNIT("..\modulation\ofdm.cpp");
+USEUNIT("..\tools\pilot.cpp");
+USEUNIT("..\modulation\psk.cpp");
+USEUNIT("..\sort\quicksort.cpp");
+USEUNIT("..\rand\randgen.cpp");
+USEUNIT("..\tools\tools.cpp");
+USEUNIT("..\tools\utilitis.cpp");
+USEUNIT("..\tools\utils2lapack.cpp");
+USEFILE("vctobpr.log");
+
+#define WinMain

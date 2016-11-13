@@ -1,0 +1,19 @@
+UTILS_PATH = ../tools
+UTILS = ${UTILS_PATH}/utilitis.cpp ${UTILS_PATH}/utilitis.h
+TOOLS = ${UTILS_PATH}/tools.cpp ${UTILS_PATH}/tools.h
+EXT_UTILITIS = ${UTILS_PATH}/ext_utilitis.cpp ${UTILS_PATH}/ext_utilitis.h
+RANDGEN_PATH=../rand
+RAND=${RANDGEN_PATH}/randgen.cpp ${RANDGEN_PATH}/randgen.h
+OPTS=-Wall -g -Wno-deprecated
+
+all : randgen.o randtest.cpp Makefile ../globaldef.h utilitiso 
+	g++ $(OPTS) -I../ -c randtest.cpp
+	pwd
+	g++ $(OPTS) -I../ -o randtest randtest.o ${UTILS_PATH}/ext_utilitis.o ${UTILS_PATH}/utilitis.o ${UTILS_PATH}/tools.o randgen.o
+
+randgen.o :  Makefile ../globaldef.h ${RAND} ${UTILS}
+	g++ -c $(OPTS) -I../ randgen.cpp
+
+utilitiso : ${UTILS_PATH}/Makefile ${UTILS} ${TOOLS} ${EXT_UTILITIS}
+	cd ../tools && make && cd ../rand
+

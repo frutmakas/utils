@@ -1,0 +1,15 @@
+UTILS_PATH = ../tools
+UTILS = ${UTILS_PATH}/utilitis.cpp ${UTILS_PATH}/utilitis.h
+TOOLS = ${UTILS_PATH}/tools.cpp ${UTILS_PATH}/tools.h
+RANDGEN_PATH=../rand
+RAND=${RANDGEN_PATH}/randgen.cpp ${RANDGEN_PATH}/randgen.h
+OPTS=-Wall -g -Wno-deprecated
+
+all : quicksort.o heapsort.o
+
+quicksort.o :  Makefile ../globaldef.h quicksort.cpp quicksort.h ${TOOLS}  ${UTILS}
+	g++ -c $(OPTS) -I../ quicksort.cpp
+
+heapsort.o :  Makefile ../globaldef.h heapsort.cpp heapsort.h ${TOOLS}  ${UTILS}
+	g++ -c $(OPTS) -I../ heapsort.cpp
+
